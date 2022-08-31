@@ -23,3 +23,5 @@ The following cities are connected to these causes of deaths.
 * Accident - Arlington Heights, Des Plaines, Melrose Park, Oak Lawn
 * Homicide - Chicago
 * Suicide - Des Plaines, Evanston, Glenview, Orland Park, Palatine, Schaumburg
+
+A link to the Google Slides Presentation can be found here: https://docs.google.com/presentation/d/1ExH6jhNLTUexULOd-wfsc16joMG4eZPS8kddMIW39R0/edit?usp=sharing
