@@ -1,0 +1,16 @@
+libname mylib "P:\";
+dm 'odsresults; clear';
+data new_data;
+    set WORK.med;
+    if Manner_of_Death = "PENDING" then delete;
+	if Manner_of_Death = "UNDETERMINED" then delete;
+	if Incident_City not in ( 'CHICAGO','DES PLAINES', 'OAK LAWN', 'ARLINGTON HEIGHTS', 'CICERO', 'EVANSTON',
+			'HARVEY' , 'SCHAUMBURG', 'PALATINE' , 'CHICAGO HEIGHTS' , 'MAYWOOD', 'BERWYN' , 'ORLAND PARK',
+			'GLENVIEW', 'MELROSE PARK') then delete; 
+			
+run;
+proc corresp data=new_data all chi2p;
+   tables Manner_of_Death, Incident_City ;
+proc freq data=new_data;
+tables Manner_of_Death*Incident_City / crosslist (stdres);
+run;
